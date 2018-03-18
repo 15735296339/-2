@@ -63,6 +63,3 @@ void tree(int size)
     display_tree(cols, rows, mx);
     display_root(mx, size);
 }
-
-
-
