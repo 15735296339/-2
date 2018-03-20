@@ -1,6 +1,18 @@
 
 
 #include <stdio.h>
+#include <unistd.h>
+
+int my_strlen ( char const * str )
+{
+    int len=0;
+    while(str[len]!='\0')
+    {
+        len++;
+    }
+    return len;
+}
+
 
 char* my_strstr(char* str,char const * to_find)
 {
@@ -23,8 +35,7 @@ char* my_strstr(char* str,char const * to_find)
 
 void my_putchar(char *s)
 {
-    write(1, s, strlen(s));
+    write(1, s, my_strlen(s));
 }
-
 
 
