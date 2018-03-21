@@ -1,24 +1,37 @@
+#include <unistd.h>
 #include <stdio.h>
-int my_print_comb2(void)
-{
-	int i,j;
-	for(i=0;i<=99;i++)
-	{
-		for(j=0;j<=99;j++)
-		{
-			if(i<j)
-			{
-				if(i<10&&j>9) printf("0%d %d, ",i,j);
-				else if(i>9&&j<10) printf("%d 0%d, ",i,j);
-				else if(i<10&&j<10) printf("0%d 0%d, ",i,j);
-				else printf("%d %d ",i,j);
-			}
-		}
-	}
-   return(0);
+
+ 
+void my_putchar(int c){
+	write(1,&c,1);
 }
-int main(void)
-{
+
+int my_print_comb2(){
+	int flag=0;
+	for(char i='0';i<='9';i++){
+		for(int j='0';j<='8';j++){
+			
+				
+				for(int k='0';k<='8';k++){
+					for(int l='1';l<='9';l++){
+						
+						my_putchar(i);
+						my_putchar(j);
+						my_putchar(k);
+						my_putchar(l);
+						my_putchar(',');
+						
+					}
+					}
+				
+			
+		}
+		
+	}
+	return 0;
+}
+
+int main(void){
+	
 	my_print_comb2();
-	return (0);
 }

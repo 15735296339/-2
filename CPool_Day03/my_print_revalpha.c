@@ -1,16 +1,15 @@
+#include <unistd.h>
 #include <stdio.h>
-int my_print_alpha(void)
-{
-	char c='z'; 
-	for(int i=0;i<26;i++)
-	{
-		printf("%c",c-i);
-	}
-	printf("\n");
-	return 0;
+
+ 
+void my_putchar(char c){
+	write(1,&c,1);
 }
-int main(void)
-{
-	my_print_alpha();
-	return(0);
+
+int my_print_revalpha(){
+	char c;
+    for(c = 'z'; c >= 'a'; c--){
+		my_putchar(c);
+	}
+	return 0;
 }

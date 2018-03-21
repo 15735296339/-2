@@ -1,23 +1,30 @@
+#include <unistd.h>
 #include <stdio.h>
 
-int my_printf_comb(void)
-{
-	int i,j,k;
-	for(i=0;i<=9;i++){
-		for(j=0;j<=9;j++){
-			for(k=0;k<=9;k++){
-				if(i<j&&j<k){
-				printf("%d%d%d",i,j,k);
-				printf("\n");		
-			    }
-		    }
-	    }
-    }
-    return (0);
+ 
+void my_putchar(char c){
+	write(1,&c,1);
 }
 
-int main(void)
-{	
-	my_printf_comb();
-        return (0);
+int my_print_comb(){
+	int flag=0;
+	for(char i='0';i<='7';i++){
+		for(int j='1';j<='8';j++){
+			if(i<j){
+				for(int k='2';k<='9';k++){
+					if(j<k){
+						my_putchar(i);
+						my_putchar(j);
+						my_putchar(k);
+						if(i=='7'&&j=='8'&&k=='9'){
+						}else{
+							my_putchar(',');
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	return 0;
 }
