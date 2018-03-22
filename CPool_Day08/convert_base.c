@@ -82,16 +82,5 @@ char *convert_base ( char const *nbr , char const *base_from , char const *base_
 
 
 
-int main()
-{
-    char s[]="1232DF6";
-    char from[]="01234567";
-    char to[]="0123456789ABCDEF";
-    char q[200];
-    char *res=q;
-    res=convert_base(s,from, to);
-    my_putstr(res);
-    my_putstr("\n");
-}
 
 

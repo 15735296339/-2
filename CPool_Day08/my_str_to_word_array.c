@@ -46,17 +46,3 @@ char **my_str_to_word_array(char const *str )
     return dest;
 }
 
-int main()
-{
-    char str[]="hello&^*world gwekwja&#skdjfa";
-    char (*res)[50]=my_str_to_word_array(str);
-    int i=0;
-    while(res[i][0]!='\0')
-    {
-        my_putstr(res[i]);
-        my_putstr("\n");
-        i++;
-    }
-}
-
-

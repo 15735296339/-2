@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 int my_strlen(char const *str)
 {
     int len = 0;
@@ -27,8 +28,3 @@ char *my_strdup ( char const * src )
     return p;
 }
 
-int main(int argc, const char * argv[]) {
-    char *str="hello world!\n";
-    char *dest=my_strdup(str);
-    my_putstr(dest);
-}

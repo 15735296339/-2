@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 int my_strlen(char const *str)
 {
     int len = 0;
@@ -21,7 +22,7 @@ char * my_strcat(char *dest , char const *src)
 
 char *concat_params(int argc, char **argv)
 {
-    char res[200];
+    char *res =malloc(sizeof(*res)*argc);
     for(int i=0;i<argc;i++)
     {
         my_strcat(res, argv[i]);
@@ -35,8 +36,3 @@ void my_putstr(char *s)
     write(1, s, my_strlen(s));
 }
 
-int main(int ac, char **av )
-{
-    my_putstr(concat_params(ac, av));
-    return 0;
-}
