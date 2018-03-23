@@ -1,14 +1,12 @@
 #include <stdio.h>
-
-int my_strlen ( char const * str );
+#include "limits.h"
+int my_strlen(const char *str);
 int my_getnbr(char const *str)
 {
     long res=0;
     int flag=1;
     int isnum=0;
     int len=my_strlen(str);
-    int INT_MAX=2147483647;
-    int INT_MIN=-2147483648;
     for(int i=0;i<len;i++)
     {
         if((str[i]<'0'||str[i]>'9')&&(str[i]!='+'&&str[i]!='-'))
@@ -35,6 +33,3 @@ int my_getnbr(char const *str)
     
     return flag?res:-res;
 }
-
-
-

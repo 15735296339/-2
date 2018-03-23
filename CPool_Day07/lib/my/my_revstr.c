@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+
+int my_strlen( char const *str);
 
 char *my_revstr( char * str )
 {
     char *dest=str;
-    char* p = str + strlen(str)-1;
+    char* p = str + my_strlen(str)-1;
     char temp;
     while(str<p)
     {
@@ -15,10 +15,5 @@ char *my_revstr( char * str )
     }
     str=dest;
     return str;
-}
-
-void my_putchar(char *s)
-{
-    write(1, s, strlen(s));
 }
 

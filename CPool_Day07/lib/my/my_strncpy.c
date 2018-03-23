@@ -1,24 +1,12 @@
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 
 char *my_strncpy(char *dest , char const *src , int n)
 {
-    char *p=dest;
-    while(*src!='\0'&&n--)
-    {
-        *dest=*src;
-        src++;dest++;
-    }
-    if(n>0)
-        *dest='\0';
-    dest=p;
-    return p;
+    int i;
+    for (i = 0; i < n && src[i] != '\0'; i++)
+        dest[i] = src[i];
+    for ( ; i < n; i++)
+        dest[i] = '\0';
+    return dest;
 }
-
-void my_putchar(char *s)
-{
-    write(1, s, strlen(s));
-}
-
 

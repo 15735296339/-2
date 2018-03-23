@@ -1,22 +1,12 @@
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 
-int my_strncmp(char const *str1, char const *str2, int count)
+int my_strncmp(char const *str1, char const *str2, int n)
 {
-    if(!count)
+    if(!n)
         return 0;
-    while(count-- && *str1 && (*str1 ++ == *str2 ++))
+    while(n-- && *str1 && (*str1 ++ == *str2 ++))
         ;
     return *str1-*str2;
 }
-
-
-void my_putchar(char *s)
-{
-    write(1, s, strlen(s));
-}
-
-
 
 

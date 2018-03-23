@@ -1,20 +1,16 @@
-
 #include <stdio.h>
-#include <math.h>
-double mysqrt(double a,double x0)
+int my_compute_power_rec(int nb , int p );
+
+int my_compute_square_root(int nb )
 {
-    double x1;
-    x1=(x0+a/x0)/2.0;
-    if(fabs(x1-x0)>0.0000000000001)
-        return mysqrt(a,x1);
-    else
-        return x1;
+    int a=1;
+    while (a<=nb)
+    {
+        if(my_compute_power_rec(a , 2) == nb)
+        {
+            return a;
+        }
+        a++;
+    }
+    return 0;
 }
-
-int my_compute_square_root( int nb )
-{
-    int res=mysqrt(nb, 1);
-    return res*res==nb?res:0;
-}
-
-

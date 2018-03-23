@@ -2,10 +2,8 @@
 #include <unistd.h>
 #include <ctype.h>
 
-void my_putchar(char c)
-{
-    write(1,&c, 1);
-}
+void my_putchar(char c);
+
 int my_showstr(char const *p)
 {
     while(*p!='\0')
@@ -22,3 +20,4 @@ int my_showstr(char const *p)
     }
     return 0;
 }
+

@@ -1,6 +1,5 @@
+
 #include <stdio.h>
-#include <string.h>
-#include <unistd.h>
 
 char *my_strcapitalize ( char * str )
 {
@@ -16,11 +15,4 @@ char *my_strcapitalize ( char * str )
     }
     return str;
 }
-
-void my_putchar(char *s)
-{
-    write(1, s, strlen(s));
-}
-
-
 
