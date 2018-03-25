@@ -1,0 +1,7 @@
+第一个题目在控制台输入：
+“gcc -o match *.c test_files/match_main.c“
+测试
+
+第二个题目在控制台输入：
+“gcc -o nmatch *.c test_files/nmatch_main.c“
+测试
